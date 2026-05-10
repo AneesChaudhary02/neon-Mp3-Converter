@@ -41,11 +41,11 @@ const upload = multer({
   },
 })
 
-app.use(
-  cors({
-    origin: FRONTEND_ORIGIN,
-  }),
-)
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST'],
+}))
+
 app.use(express.json())
 
 app.get('/api/health', (_, res) => {
