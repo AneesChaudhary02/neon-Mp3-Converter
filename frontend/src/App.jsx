@@ -15,7 +15,7 @@ import {
   Zap,
 } from 'lucide-react'
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+const API_BASE = import.meta.env.VITE_API_URL || 'https://neon-mp3-converter.onrender.com'
 
 const bytesToMb = (bytes) => `${(bytes / (1024 * 1024)).toFixed(2)} MB`
 
