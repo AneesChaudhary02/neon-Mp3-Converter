@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --bg-app: #f3f7ff;
+  --panel: rgba(255, 255, 255, 0.72);
+  --text-main: #101827;
+  --text-muted: #5b6480;
+  --border-glow: rgba(96, 165, 250, 0.4);
+  --cyan-glow: rgba(56, 189, 248, 0.25);
+  --violet-glow: rgba(168, 85, 247, 0.25);
+}
+
+.dark {
+  --bg-app: #05070d;
+  --panel: rgba(16, 24, 39, 0.62);
+  --text-main: #e5e7eb;
+  --text-muted: #a0a9c0;
+  --border-glow: rgba(56, 189, 248, 0.42);
+  --cyan-glow: rgba(34, 211, 238, 0.32);
+  --violet-glow: rgba(139, 92, 246, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, Segoe UI, Roboto, sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at 20% 20%, var(--cyan-glow), transparent 40%),
+    radial-gradient(circle at 80% 0%, var(--violet-glow), transparent 42%), var(--bg-app);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glass-panel {
+  border: 1px solid var(--border-glow);
+  background: var(--panel);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 22px 45px -25px rgba(15, 23, 42, 0.8);
+}
