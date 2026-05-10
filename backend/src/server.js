@@ -10,7 +10,7 @@ ffmpeg.setFfmpegPath(ffmpegPath)
 
 const app = express()
 const PORT = process.env.PORT || 5000
-const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || 'https://neon-mp3-converter.vercel.app/'
+const FRONTEND_ORIGIN = '*'
 
 const UPLOAD_DIR = path.join(process.cwd(), 'uploads')
 const OUTPUT_DIR = path.join(process.cwd(), 'outputs')
